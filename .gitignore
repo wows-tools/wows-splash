@@ -56,8 +56,8 @@ dkms.conf
 *.swo
 
 # binary
-wows-depack-cli
-wows-depack-test
+wows-splash-cli
+wows-splash-test
 
 # coverage stuff
 coverage.base
