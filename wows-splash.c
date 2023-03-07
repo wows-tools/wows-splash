@@ -71,7 +71,8 @@ int main(int argc, char **argv) {
     argp_parse(&argp, argc, argv, 0, 0, args);
 
     if (args->input != NULL) {
-        ret = wows_parse_splash(args->input);
+        wows_splash *content;
+        ret = wows_parse_splash(args->input, &content);
     }
     return ret;
 }
