@@ -34,7 +34,6 @@ void test_wows_parse_splash_fp(void) {
 
     wows_splash_print(splash_content);
     wows_splash_free(splash_content);
-    
 }
 
 int main() {
