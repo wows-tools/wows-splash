@@ -67,17 +67,16 @@ int wows_splash_print(wows_splash *splash_content) {
 int wows_splash_entry_print(wows_splash_entry *entry) {
     printf("* name_len: %d\n", entry->name_len);
     printf("* name:     %s\n", entry->name);
-    printf("* data:    ");
-    for (int i = 0; i < 24; i++) {
-        if (i % 8 == 0) {
-            printf(" ");
-        }
-        printf("%02x ", entry->data[i]);
+    printf("* data:     ");
+    for (int i = 0; i < 6; i++) {
+        printf("0x%x ", entry->data[i]);
     }
     printf("\n");
 }
 
 int wows_splash_free(wows_splash *splash_content) {
     // TODO
+    hashmap_free(splash_content->entries);
+    free(splash_content);
     return 0;
 }

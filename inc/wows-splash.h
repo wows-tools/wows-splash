@@ -8,7 +8,8 @@ typedef struct {
 typedef struct {
     uint32_t name_len;
     char *name;
-    uint8_t data[24]; // 192 bits of data, maybe 3 x 64 bits fields
+    uint32_t
+        data[6]; // 192 bits of data, maybe 6 x 32 bits fields (int or float) describing an (hit)box (x y z dx dy dz);
 } wows_splash_entry;
 
 int wows_parse_splash(char *input, wows_splash **splash_content);
