@@ -20,5 +20,6 @@ typedef struct {
 } wows_splash;
 
 int wows_parse_splash(char *input, wows_splash **splash_content);
+int wows_parse_splash_fp(FILE *input, wows_splash **splash_content);
 int wows_splash_print(wows_splash *splash_content);
 int wows_splash_free(wows_splash *splash_content);

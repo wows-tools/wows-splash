@@ -50,16 +50,10 @@ int wows_splash_print(wows_splash *splash) {
     return 0;
 }
 
-int wows_parse_splash(char *input, wows_splash **splash_content) {
+int wows_parse_splash_fp(FILE *fp, wows_splash **splash_content) {
     // TODO error handling in case the file is sketchy
 
     int ret = 0;
-
-    // Open the index file
-    FILE *fp = fopen(input, "ro");
-    if (fp <= 0) {
-        return -1;
-    }
 
     wows_splash *splash = calloc(sizeof(wows_splash), 1);
 
@@ -87,6 +81,18 @@ int wows_parse_splash(char *input, wows_splash **splash_content) {
 
     ret = feof(fp);
     *splash_content = splash;
+    return ret;
+}
+
+int wows_parse_splash(char *input, wows_splash **splash_content) {
+    int ret = 0;
+
+    // Open the index file
+    FILE *fp = fopen(input, "ro");
+    if (fp <= 0) {
+        return -1;
+    }
+    ret = wows_parse_splash_fp(fp, splash_content);
     fclose(fp);
     return ret;
 }
