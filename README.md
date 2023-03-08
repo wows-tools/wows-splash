@@ -1,5 +1,8 @@
 # wows-splash
 
+[![Ubuntu-x86_64](https://github.com/wows-tools/wows-splash/actions/workflows/ubuntu-x86_64.yml/badge.svg)](https://github.com/wows-tools/wows-splash/actions/workflows/ubuntu-x86_64.yml)
+[![Coverage Status](https://coveralls.io/repos/github/wows-tools/wows-splash/badge.svg?branch=main)](https://coveralls.io/github/wows-tools/wows-splash?branch=main)
+
 parser for the .splash World of Warships format
 
 ## Role
