@@ -30,4 +30,4 @@ jobs:
     - name: Test
       run: make coverage
     - name: Memory checks
-      run: valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --num-callers=20 --track-fds=yes --track-origins=yes --error-exitcode=42 ./wows-spash-test
+      run: valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --num-callers=20 --track-fds=yes --track-origins=yes --error-exitcode=42 ./wows-splash-test
