@@ -14,3 +14,9 @@ The .splash seems to describe a set of big (hit)boxes containing the ship model:
 ## Format
 
 The format is described in [FORMAT.md](https://github.com/wows-tools/wows-splash/blob/main/FORMAT.md).
+
+## Status
+
+General layout of the file known.
+
+Details such as signification and format of the fields (specially the 6 32 bits ones) unknown.
