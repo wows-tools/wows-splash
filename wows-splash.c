@@ -70,9 +70,14 @@ int main(int argc, char **argv) {
     int ret = 0;
     argp_parse(&argp, argc, argv, 0, 0, args);
 
+    wows_splash *content;
     if (args->input != NULL) {
-        wows_splash *content;
         ret = wows_parse_splash(args->input, &content);
     }
+    if (args->print) {
+        wows_splash_print(content);
+    }
+    wows_splash_free(content);
+    free(args);
     return ret;
 }
